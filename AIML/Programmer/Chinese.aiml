@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/AIML-1.0.1"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://alicebot.org/2001/AIML-1.0.1 http://aitools.org/aiml/schema/AIML.xsd">
+  <!-- Free software &copy; 2001-2003 ALICE A.I. Foundation. -->
+  <!-- This program is open source code released under -->
+  <!-- the terms of the GNU General Public License     -->
+  <!-- as published by the Free Software Foundation.   -->
+  <!-- Complies with AIML 1.01 Tag Set Specification -->
+  <!-- as adopted by the ALICE A.I. Foundation.  -->
+  <!-- Annotated Version updated September 2003 -->
+
+<topic name="chinese">
+<category><pattern>CHELLO</pattern><template><random><li>你好！</li><li>您好！</li></random></template></category>
+<category><pattern>CBYE</pattern><template><random><li>再見！</li><li>再會！</li><li>拜拜！</li></random></template></category>
+<category><pattern>CGOODNIGHT</pattern><template><li>晚安！</li></template></category>
+<category><pattern><srai>CHELLO</srai></pattern><that>HI</that><template><random><li>你好嗎？</li><li>你在做什麼？</li></random></template></category>
+<category><pattern><srai>CHELLO</srai></pattern><that>HELLO</that><template><random><li>你好嗎？</li><li>你在做什麼？</li></random></template></category>
+<category><pattern><srai>CHELLO</srai></pattern><that>你好</that><template><random><li>你好嗎？</li><li>你在做什麼？</li></random></template></category>
+<category><pattern><srai>CHELLO</srai></pattern><that>您好</that><template><random><li>你好嗎？</li><li>你在做什麼？</li></random></template></category>
+</topic>
+</aiml>
