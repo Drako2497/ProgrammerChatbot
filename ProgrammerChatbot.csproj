@@ -109,7 +109,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /I/Y "$(ProjectDir)AIML\Programmer" "$(SolutionDir)MultiDesktop\$(OutDir)Programmer"
-xcopy /Y "$(ProjectDir)AIML\config\ProgrammerSettings.xml" "$(SolutionDir)MultiDesktop\$(OutDir)config\ProgrammerSettings.xml"
+xcopy /Y "$(ProjectDir)AIML\config\ProgrammerSettings.xml" "$(SolutionDir)MultiDesktop\$(OutDir)config"
 xcopy /Y "$(TargetPath)" "$(SolutionDir)MultiDesktop\$(OutDir)"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
