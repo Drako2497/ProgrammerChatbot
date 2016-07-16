@@ -15,7 +15,7 @@ namespace ProgrammerChatbot
 
         }
 
-        public override void doAction(Chatbot bot)
+        public override void doAction(Programmer bot)
         {
             lock (bot.OutgoingMessage)
             {

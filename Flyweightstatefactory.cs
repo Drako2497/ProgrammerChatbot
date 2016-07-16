@@ -18,7 +18,7 @@ namespace ProgrammerChatbot
         }
 
         //Gets the botstate from the bot
-        public Botstate getBotState(string stateName, Chatbot bot)
+        public Botstate getBotState(string stateName, Programmer bot)
         {
             if (flyweights.ContainsKey(stateName))
             {
@@ -65,14 +65,20 @@ namespace ProgrammerChatbot
                         newState = new SleepState();
                         flyweights.Add(stateName, newState);
                         break;
+                    case "Eat":
+                        newState = new EatState();
+                        flyweights.Add(stateName, newState);
+                        break;
                     default:
                         newState = null;
                         break;
                 }
 
                 if (newState != null)
+                {
                     flyweights.Add(stateName, newState);
-
+                }
+                    
                 return newState;
             }
         }

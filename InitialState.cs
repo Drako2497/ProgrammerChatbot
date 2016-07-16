@@ -14,7 +14,7 @@ namespace ProgrammerChatbot
 
         }
 
-        public override void doAction(Chatbot bot)
+        public override void doAction(Programmer bot)
         {
             //If the bot is not active, it will set the next state to the sleepstate
             if ((bot.wakeUpTime > bot.sleepTime && (DateTime.Now.TimeOfDay < bot.wakeUpTime && DateTime.Now.TimeOfDay >= bot.sleepTime)) || (bot.wakeUpTime < bot.sleepTime && (DateTime.Now.TimeOfDay < bot.wakeUpTime || DateTime.Now.TimeOfDay >= bot.sleepTime)))

@@ -15,7 +15,7 @@ namespace ProgrammerChatbot
             workCounter = 0;
         }
 
-        public override void doAction(Chatbot bot)
+        public override void doAction(Programmer bot)
         {
             workCounter = workCounter++ % 2700;
 
@@ -25,10 +25,19 @@ namespace ProgrammerChatbot
                 bot.setNextState(stateFactory.getBotState("Available", bot));
             }
 
-            //Else if the bot wants a break from work, it will set the next state for the socialize state
+            //Else if the bot wants a break from work, it will set the next state for the socialize state or the rest state
             else if (workCounter == 0) //A 90 minute elasped
             {
-                bot.setNextState(stateFactory.getBotState("Socialize", bot));
+                if (new Random().Next(0, 2) == 0)
+                {
+                    bot.setNextState(stateFactory.getBotState("Socialize", bot));
+                }
+
+                else
+                {
+                    bot.setNextState(stateFactory.getBotState("Rest", bot));
+                }
+                   
             }
         }
     }

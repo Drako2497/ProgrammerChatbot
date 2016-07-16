@@ -14,7 +14,7 @@ namespace ProgrammerChatbot
 
         }
 
-        public override void doAction(Chatbot bot)
+        public override void doAction(Programmer bot)
         {
             //If the bot is active, switch to the greetingstate
             if ((bot.wakeUpTime > bot.sleepTime && (DateTime.Now.TimeOfDay >= bot.wakeUpTime || DateTime.Now.TimeOfDay < bot.sleepTime)) || (bot.wakeUpTime < bot.sleepTime && (DateTime.Now.TimeOfDay >= bot.wakeUpTime && DateTime.Now.TimeOfDay < bot.sleepTime)))

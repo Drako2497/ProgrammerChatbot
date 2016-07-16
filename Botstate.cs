@@ -29,7 +29,7 @@ namespace ProgrammerChatbot
         /// <param name="input">string</param>
         /// <param name="user">User (so conversations can be tracked by the bot, per user)</param>
         /// <returns>string</returns>
-        public string getAIMLResponse(string input, User user, Chatbot bot, char punctuation = '.')
+        public string getAIMLResponse(string input, User user, Programmer bot, char punctuation = '.')
         {
             Request r = new Request(input, user, bot);
             Result res = bot.Chat(r);
@@ -37,10 +37,10 @@ namespace ProgrammerChatbot
             return res.Output;
         }
 
-        public abstract void doAction(Chatbot bot);
+        public abstract void doAction(Programmer bot);
 
         //Find the user associated to the master account in the primary chat source
-        protected User getPrimaryUser(Chatbot bot)
+        protected User getPrimaryUser(Programmer bot)
         {
             if (bot.PSource.MasterAccount.Owner.Profile != null)
             {

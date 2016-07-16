@@ -47,12 +47,11 @@
     <Compile Include="AvailableState.cs" />
     <Compile Include="Botstate.cs" />
     <Compile Include="BusyState.cs" />
-    <Compile Include="Chatbot.cs" />
+    <Compile Include="EatState.cs" />
     <Compile Include="Flyweightstatefactory.cs" />
     <Compile Include="GreetingState.cs" />
     <Compile Include="InitialState.cs" />
     <Compile Include="Profile.cs" />
-    <Compile Include="Profiler.cs" />
     <Compile Include="Programmer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestState.cs" />

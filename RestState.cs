@@ -17,7 +17,7 @@ namespace ProgrammerChatbot
             restCounter = 0;
         }
 
-        public override void doAction(Chatbot bot)
+        public override void doAction(Programmer bot)
         {
             restCounter = ++restCounter % 150;
 

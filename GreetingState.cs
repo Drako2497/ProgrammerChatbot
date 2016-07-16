@@ -15,7 +15,7 @@ namespace ProgrammerChatbot
         }
 
         //Does the greeting to the user and the bot state will be set to the available state
-        public override void doAction(Chatbot bot)
+        public override void doAction(Programmer bot)
         {
             lock (bot.OutgoingMessage)
             {
