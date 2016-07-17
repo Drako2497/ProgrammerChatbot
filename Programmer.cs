@@ -264,7 +264,7 @@ namespace ProgrammerChatbot
             return list;
         }
 
-        public override void receive(ChatMessage message)
+        public void receive(ChatMessage message)
         {
             //If status of the bot is not sleeping or the user sends a message, then the bot will response
             if (Status != Botstatus.Sleep || message.Sender.Username.Equals("Boss"))
