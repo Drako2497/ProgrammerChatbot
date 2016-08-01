@@ -52,6 +52,7 @@
   <item name="worktime" value="8:00 AM"/>
   <item name="offworktime" value="5:00 PM"/>
   <item name="eattime" value="12:00 PM"/>
+  <item name="noteattime" value="12:30 PM"/>
   <item name="favoritemovie" value="2007 The Godfather"/>
   <item name="religion" value="Christian"/>
   <item name="favoritefood" value="Steak"/>

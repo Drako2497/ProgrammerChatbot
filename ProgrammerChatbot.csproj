@@ -74,9 +74,7 @@
     </Content>
     <Content Include="AIML\config\Splitters.xml" />
     <Content Include="AIML\config\Substitutions.xml" />
-    <Content Include="AIML\config\TechnicianSettings.xml">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="AIML\config\TechnicianSettings.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="AIML\Programmer\Bot.aiml">
@@ -85,9 +83,7 @@
     <None Include="AIML\Programmer\Chinese.aiml">
       <SubType>Designer</SubType>
     </None>
-    <None Include="AIML\Programmer\Chitchat.aiml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="AIML\Programmer\Chitchat.aiml" />
     <None Include="AIML\Programmer\Condition.aiml">
       <SubType>Designer</SubType>
     </None>
@@ -105,6 +101,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy /I/Y "$(ProjectDir)AIML\Programmer" "$(SolutionDir)MultiDesktop\$(OutDir)Programmer"

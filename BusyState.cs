@@ -26,7 +26,7 @@ namespace ProgrammerChatbot
             }
 
             //Else if the bot wants a break from work, it will set the next state for the socialize state or the rest state
-            else if (workCounter == 0) //A 90 minute elasped
+            else if (workCounter == 0) //90 minutes elasped
             {
                 if (new Random().Next(0, 2) == 0)
                 {

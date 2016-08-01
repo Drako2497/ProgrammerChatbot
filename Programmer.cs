@@ -23,8 +23,7 @@ namespace ProgrammerChatbot
         public TimeSpan workTime { get; private set; }
         public TimeSpan offWorkTime { get; private set; }
         public TimeSpan eatTime { get; private set; }
-
-        public event PropertyChangedEventHandler StatusChanged;
+        public TimeSpan notEatTime { get; private set; }
 
         public SortedList<string, IChatSource> Sources { get; private set; }
         public SortedList<string, User> Users { get; private set; }
@@ -65,8 +64,9 @@ namespace ProgrammerChatbot
             }
         }
 
-        public Programmer()
+        public Programmer(string configFile)
         {
+            this.configFile = configFile;
             initialize();
 
             OutgoingMessage = new Queue<ChatMessage>();
@@ -80,6 +80,7 @@ namespace ProgrammerChatbot
             workTime = Convert.ToDateTime(GlobalSettings.grabSetting("worktime")).TimeOfDay;
             offWorkTime = Convert.ToDateTime(GlobalSettings.grabSetting("offworktime")).TimeOfDay;
             eatTime = Convert.ToDateTime(GlobalSettings.grabSetting("eattime")).TimeOfDay;
+            notEatTime = Convert.ToDateTime(GlobalSettings.grabSetting("notEatTime")).TimeOfDay;
 
             currentState = Botstate.stateFactory.getBotState("Initial", this);
 
